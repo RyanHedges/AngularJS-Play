@@ -1,0 +1,20 @@
+<!doctype html>
+<!-- Without ng-app the application this application will not work at all -->
+<html ng-app>
+  <head>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js'></script>
+  </head>
+  <body>
+    <div>
+      <label>Message:</label>
+      <!-- Simple data binding in angular binds data in the model and view together -->
+      <input type="text" ng-model="yourMessage" placeholder="Enter a Message">
+      <label>Name:</label>
+      <input type="text" ng-model="yourName" placeholder="Enter your name">
+      <hr>
+      <!-- Curly bracer are like string interpolation in ruby in a way -->
+      <h3>{{yourMessage}} {{yourName}}</h3>
+    </div>
+
+  </body>
+</html> 
