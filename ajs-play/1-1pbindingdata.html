@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html ng-app>
+  <head>
+    <script type="text/javascript" src='https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js'></script>
+    <!-- As you know styles don't normally go here -->
+    <style type="text/css">
+    #input {
+      width: 40%;
+      float: left;
+    }
+
+    div {
+      padding: 2%;
+    }
+
+    ul {
+      list-style: none;
+    }
+      </style>
+  </head>
+  
+
+  <body>
+    <h1>Write a letter and see it magically appear</h1>
+    <div id="input">
+
+      <ul>
+        <li> <input type="text" ng-model="firstGreeting" placeholder="enter greeting"> </li>
+        <li> <textarea type="text" ng-model="yourMessage"   placeholder="enter message" spellcheck="defult" cols="40" wrap="hard" rows="5"></textarea> </li>
+        <li> <input type="text" ng-model="yourSignature" placeholder="enter signature"> </li>
+      </ul>
+    </div>
+    
+    <div >
+      <h2>{{firstGreeting}}</h2> 
+      <p>{{yourMessage}}</p>
+      <h3>{{yourSignature}}</h3>
+      </ul>
+    </div>
+  </body>
+</html>
