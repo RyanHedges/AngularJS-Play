@@ -6,7 +6,23 @@
 </head>
 
 <body>
-  <h1>Hello World</h1>
+  <h1>Answer this questions.</h1>
+  <div ng-controller='MasterController'>
+    <h3>What is seven times two minus five?</h3>
+    <input ng-model="answer">
+  </div>
+
+  <script type="text/javascript">
+    var MasterController = function ($scope) {
+      $scope.$watch("answer", function() {
+        if ($scope.answer == 9) {
+          alert("You are right!")
+        } else if ($scope.answer == "nine") {
+          alert("you are proper and correct!")
+        } else { console.log($scope.answer) }
+      })
+    }
+  </script>
 
 </body>
 </html>
