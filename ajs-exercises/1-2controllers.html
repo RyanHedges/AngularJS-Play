@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+  <title>Angular - Controllers</title>
+  <script type="text/javascript" src='https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js'></script>
+</head>
+<!-- everything in div is in the Ctrl controller -->
+<!-- angular uses elemnts in DOM as containers for $scope (similar to scope in JS) -->
+<body>
+  <div ng-controller="Ctrl">
+    <input ng-model="name">
+    <h6>{{name}} is of the ripe old age of {{age}}.</h6>
+  </div>
+  <hr>
+  <div ng-controller="AnotherCtrl">
+    <input ng-model="name">
+    <h5>{{name}} in AnotherCtrl is {{age}} years old.</h5>
+  </div>
+  <hr>
+  <div>
+    <input ng-controller="withoutCtrler">
+    <h4>{{name}} isn't a controller that exists with the age of {{age}}.</h4>
+  </div>
+
+
+  <!-- naming the controllers differently provides them with different scope -->
+  <script type="text/javascript">
+  var Ctrl = function ($scope) {
+    $scope.name = "Ryan"
+    $scope.age  = 28
+  }
+  </script>
+
+  <script type="text/javascript">
+  var AnotherCtrl = function ($scope) {
+    $scope.name = "John"
+    $scope.age  = 100
+    // watching models change and reacting to them based on the function.
+    $scope.$watch('name', function() {
+      console.log($scope.name)
+    })
+  }
+  </script>
+</body>
+</html>
