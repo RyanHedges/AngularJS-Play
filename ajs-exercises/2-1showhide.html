@@ -1,0 +1,48 @@
+<!-- directive - way to get html to do what you want - show/hide is angular based -->
+
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name='viewport' content='width-device-width'>
+    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+
+    <style type="text/css">
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font: 16px/1.5 sans-serif;
+        color: #222;
+        margin: 5em;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div>
+      <label>Name</label><input type="text" ng-model="name">
+    </div>
+
+
+    <div>
+      <input type="checkbox" ng-model="checked"><label>Show?</label>
+    </div>
+
+    <div ng-show="checked">
+      Hello, {{name || "Ryan"}}'s world!
+    </div>
+
+  </body>
+
+</htm>
+
+
+
+
+
+
+

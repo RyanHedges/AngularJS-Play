@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+  <title>AngularShowHide</title>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+
+  <style type="text/css">
+    #story {
+      width: 500px;
+      margin: 0 auto;
+      padding-top: 40px;      
+    }
+    .words {
+      font-weight: 700;
+      text-decoration: underline;
+    }
+    
+  </style>
+
+
+</head>
+
+<body>
+  <div >
+  <input type="checkbox" ng-model="madlib"><label>Show words</label>
+  </div>
+  <label>1. Noun</label>
+  
+  <input type="text" ng-model="noun1">
+  <label>2. Noun</label>
+  <input type="text" ng-model="noun2">
+  <label>3. Past Tense Verb</label>
+  <input type="text" ng-model="verb1">
+  <label>4. Past Tense Verb</label>
+  <input type="text" ng-model="verb2">
+  
+  <div id="story">
+    <p>
+    "A
+    <span ng-show="madlib">{{ noun1 || "UFO"}}</span>
+    <span class="words" ng-hide="madlib">1. noun</span>!
+     screeched Becky Turner. "Outside the
+    <span ng-show="madlib">{{ noun2 || "chem"}}</span>
+    <span class="words" ng-hide="madlib">2. noun</span>
+    lab!" 
+
+      <p>We peered through the dusty glass. The silver dish took up the entire quadrangle, having 
+        <span ng-show="madlib">{{ verb1 || "landed"}}</span>
+        <span class="words" ng-hide="madlib">3. past tense verb</span>
+        on the basketball team judging from the lanky legs protruding crookedly.</p>
+
+    Acne McGee 
+    <span ng-show="madlib">{{ verb2 || "grimaced"}}</span>
+    <span class="words" ng-hide="madlib">4. past tense verb</span>. 
+    "I had money on those guys winning the trophy this year."
+    </p>
+  </div>
+</body>
+
+</html>
