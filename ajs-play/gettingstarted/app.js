@@ -1,1 +1,1 @@
-var app = angular.moduler('MyPlayApp', []);
+var app = angular.module('MyPlayApp', []);
