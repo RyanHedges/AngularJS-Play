@@ -1,0 +1,1 @@
+Based on tutorial found at this [AngularJS Tutorial](http://www.revillweb.com/tutorials/angularjs-in-30-minutes-angularjs-tutorial/ "AngularJS Tutorial")
